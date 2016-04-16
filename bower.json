@@ -1,0 +1,21 @@
+{
+  "name": "locator-dash",
+  "description": "dashboard",
+  "main": "",
+  "authors": [
+    "Michael Knoch <info@michaelknoch.de>"
+  ],
+  "license": "ISC",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "gridism": "^0.2.1"
+  }
+}
