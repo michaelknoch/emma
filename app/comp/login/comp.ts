@@ -10,7 +10,7 @@ import {Router} from "angular2/router";
                     <img src="dist/assets/logo.png" class="logo">
                      <input type="text" class="form-control" placeholder="Mail" aria-describedby="basic-addon1">
                      <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                     <input type="text" class="form-control" placeholder="Token" aria-describedby="basic-addon1">
+                     <input (click)="enableToken()" [ngClass]="{disabeld: !token}" type="text" class="form-control token" placeholder="Register from Token" aria-describedby="basic-addon1">
                      <button (click)="login()" type="button" class="btn btn-default">Get Beautified</button>
                 </div>
             </div>
@@ -23,14 +23,21 @@ import {Router} from "angular2/router";
 
 export class Login implements OnInit {
 
+    private token = false;
+
     constructor(private _router:Router) {
+    }
+
+    ngOnInit() {
     }
 
     login() {
         this._router.navigate(['Root']);
     }
 
-    ngOnInit() {
+    enableToken() {
+        console.info('enable');
+        this.token = true;
     }
 
 }
