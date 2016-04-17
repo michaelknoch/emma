@@ -1,0 +1,45 @@
+$white: rgba(255, 255, 255, 0.7);
+
+.login-container {
+    min-height: 100vh;
+    background-image: url('dist/assets/img/login_back.jpeg');
+    background-size: cover;
+}
+
+.form-wrapper {
+    position: absolute;
+    width: 350px;
+    top: 40%;
+    left: 30%;
+    margin-left: -195px;
+
+    background-color: rgba(38, 38, 38, 0.8);
+    padding: 20px;
+
+    input {
+        margin: 5px;
+        margin-left: 0;
+        color: black;
+        padding: 20px;
+        border: none !important;
+        border-radius: 0;
+    }
+
+    img.logo {
+        max-width: 100%;
+    }
+
+    .btn-default {
+        color: #333;
+        background-color: #A6ABAF;
+        width: 100%;
+        border-radius: 0;
+        color: white;
+        text-transform: uppercase;
+        border: none;
+        transition-duration: 0.3s;
+        &:hover {
+            background-color: #DFBA2E;
+        }
+    }
+}
