@@ -1,4 +1,5 @@
 import { Component, OnInit } from 'angular2/core';
+import {Router} from "angular2/router";
 
 @Component({
     template: `
@@ -10,7 +11,7 @@ import { Component, OnInit } from 'angular2/core';
                      <input type="text" class="form-control" placeholder="Mail" aria-describedby="basic-addon1">
                      <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
                      <input type="text" class="form-control" placeholder="Token" aria-describedby="basic-addon1">
-                     <button type="button" class="btn btn-default">Get Beautified</button>
+                     <button (click)="login()" type="button" class="btn btn-default">Get Beautified</button>
                 </div>
             </div>
         </div>
@@ -21,7 +22,12 @@ import { Component, OnInit } from 'angular2/core';
 })
 
 export class Login implements OnInit {
-    constructor() {
+
+    constructor(private _router:Router) {
+    }
+
+    login() {
+        this._router.navigate(['Root']);
     }
 
     ngOnInit() {
