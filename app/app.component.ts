@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core';
-import {Login} from './comp/Login/login';
+import {Login} from './comp/Login/comp';
+import {Root} from './comp/Root/comp';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
@@ -10,7 +11,7 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @RouteConfig([
     {path: '/', name: 'Login', component: Login},
-    {path: '/location/:id', name: 'Location', component: Location}
+    {path: '/root/...', name: 'Root', component: Root}
 ])
 
 export class AppComponent {
