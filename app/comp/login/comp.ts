@@ -30,9 +30,9 @@ export class Login implements OnInit {
 
     }
 
-    /*ngOnInit() {
+    ngOnInit() {
 
-    }*/
+    }
 
     login() {
         this._router.navigate(['Root']);

@@ -18,11 +18,12 @@ declare var __moduleName: any;
 ])
 
 export class Root implements OnInit {
-    /*constructor() {
+
+    constructor() {
 
     }
 
     ngOnInit() {
 
-    }*/
+    }
 }

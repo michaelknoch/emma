@@ -9,11 +9,11 @@ import { Component, OnInit } from 'angular2/core';
 
 export class Dashboard implements OnInit {
 
-    /*constructor() {
+    constructor() {
     }
 
     ngOnInit() {
-    }*/
+    }
 
 }
 
