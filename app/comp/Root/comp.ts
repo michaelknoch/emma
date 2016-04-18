@@ -1,8 +1,8 @@
 import {Component} from 'angular2/core';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
-import {OnInit} from "angular2/core";
-import {Dashboard} from "../Dashboard/comp";
-import {Settings} from "../Settings/comp";
+import {OnInit} from 'angular2/core';
+import {Dashboard} from '../Dashboard/comp';
+import {Settings} from '../Settings/comp';
 declare var __moduleName:any;
 
 @Component({
@@ -19,9 +19,10 @@ declare var __moduleName:any;
 
 export class Root implements OnInit {
     constructor() {
+
     }
 
     ngOnInit() {
-    }
 
+    }
 }

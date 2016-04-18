@@ -4,9 +4,9 @@ import {Root} from './comp/Root/comp';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
-    selector: 'dash',
+    directives: [ROUTER_DIRECTIVES],
     template: '<router-outlet></router-outlet>',
-    directives: [ROUTER_DIRECTIVES]
+    selector: 'dash'
 })
 
 @RouteConfig([

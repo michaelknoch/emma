@@ -1,7 +1,10 @@
+'use strict';
+
 const gulp = require('gulp');
 const typescript = require('gulp-typescript');
 const tscConfig = require('./tsconfig.json');
 const shell = require('gulp-shell');
+const tslint = require("gulp-tslint");
 
 gulp.task('clean', function () {
     const del = require('del');
@@ -14,6 +17,12 @@ gulp.task('ts', function () {
         .src('app/**/*.ts')
         .pipe(typescript(tscConfig.compilerOptions))
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('tslint', function() {
+    return gulp.src('app/**/*.ts')
+        .pipe(tslint())
+        .pipe(tslint.report('verbose'));
 });
 
 gulp.task('html', function () {
