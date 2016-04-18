@@ -1,7 +1,9 @@
 import { Component, OnInit } from 'angular2/core';
 import {Router} from "angular2/router";
+declare var __moduleName: any;
 
 @Component({
+    moduleId: __moduleName,
     template: `
     <div class="container-fluid login-container">
         <div class="container">
@@ -16,9 +18,7 @@ import {Router} from "angular2/router";
             </div>
         </div>
    </div> `,
-
-    styleUrls: ['./dist/comp/Login/style.css']
-
+    styleUrls: ['style.css']
 })
 
 export class Login implements OnInit {
