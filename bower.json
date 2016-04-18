@@ -16,6 +16,5 @@
     "tests"
   ],
   "dependencies": {
-    "gridism": "^0.2.1"
   }
 }
