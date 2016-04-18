@@ -9,11 +9,13 @@ import { Component, OnInit } from 'angular2/core';
 
 export class Settings implements OnInit {
 
-    constructor() {
+    /*constructor() {
+
     }
 
     ngOnInit() {
-    }
+
+    }*/
 
 }
 

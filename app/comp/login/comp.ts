@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 import {Router} from 'angular2/router';
-declare var __moduleName:any;
+declare var __moduleName: any;
 
 @Component({
     moduleId: __moduleName,
@@ -26,13 +26,13 @@ export class Login implements OnInit {
 
     token = false;
 
-    constructor(private _router:Router) {
+    constructor(private _router: Router) {
 
     }
 
-    ngOnInit() {
+    /*ngOnInit() {
 
-    }
+    }*/
 
     login() {
         this._router.navigate(['Root']);
