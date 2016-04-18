@@ -17,3 +17,10 @@ ul {
 .relative {
     position: relative;
 }
+
+.container-fluid {
+    .container {
+        margin: 0 auto;
+        padding: 0;
+    }
+}
