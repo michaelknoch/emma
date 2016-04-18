@@ -3,16 +3,12 @@ import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 import {OnInit} from "angular2/core";
 import {Dashboard} from "../Dashboard/comp";
 import {Settings} from "../Settings/comp";
+declare var __moduleName:any;
 
 @Component({
-    template: `
-    <div class="container-fluid login-container">
-        <div class="container">
-            <div class="row">
-                <router-outlet></router-outlet>
-            </div>
-        </div>
-   </div> `,
+    moduleId: __moduleName,
+    templateUrl: 'template.html',
+    styleUrls: ['style.css'],
     directives: [ROUTER_DIRECTIVES]
 })
 
