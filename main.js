@@ -39,8 +39,8 @@ function createWindow() {
 // initialization and is ready to create browser windows.
 app.on('ready', function () {
     createWindow();
-    autoUpdater.setFeedURL('http://localhost:3000/release?version=' + app.getVersion());
-    autoUpdater.checkForUpdates();
+    //autoUpdater.setFeedURL('http://localhost:3000/release?version=' + app.getVersion());
+    //autoUpdater.checkForUpdates();
 });
 
 // Quit when all windows are closed.
