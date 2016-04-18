@@ -1,7 +1,21 @@
-.menu {
+$asphalt: #34495e;
 
+.top-bar {
+    .logo {
+        max-height: 100px;
+        width: auto;
+    }
+}
+
+.main {
+    width: calc(100% - 120px);
+    padding-left: 30px;
+}
+
+.menu {
+    max-width: 120px;
     min-height: 100%;
-    background-color: #2980b9;
+    background-color: $asphalt;
 
     i.fa {
         width: 100%;
@@ -14,7 +28,6 @@
         position: relative;
         cursor: pointer;
         height: 80px;
-        background-color: #2980b9;
         padding: 5px;
         margin-top: 20px;
         float: left;
@@ -31,7 +44,7 @@
             position: absolute;
             width: auto;
             line-height: 60%;
-            right: 48px;
+            right: 10px;
             top: 0;
             font-size: 10px;
             padding: 7px;
@@ -50,12 +63,12 @@
 .user-wrapper {
     position: absolute;
     right: 0;
-    top: 0;
+    top: 30px;
     z-index: 10;
     width: 200px;
     padding: 15px;
     padding-top: 0;
-    background-color: #2980B9;
+    background-color: $asphalt;
 
     img.thumb {
         width: 55px;
