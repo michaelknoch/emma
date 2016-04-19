@@ -19,7 +19,7 @@ gulp.task('ts', function () {
         .pipe(gulp.dest('dist'));
 });
 
-gulp.task('tslint', function() {
+gulp.task('tslint', function () {
     return gulp.src('app/**/*.ts')
         .pipe(tslint())
         .pipe(tslint.report('verbose'));
@@ -44,6 +44,11 @@ gulp.task('scss', function () {
 
 gulp.task('css', function () {
     return gulp.src('app/**/*.css')
+        .pipe(gulp.dest('dist'));
+});
+
+gulp.task('json', function () {
+    return gulp.src('app/**/*.json')
         .pipe(gulp.dest('dist'));
 });
 
@@ -88,5 +93,5 @@ gulp.task('bump', function () {
         .pipe(gulp.dest('./'));
 });
 
-gulp.task('build', ['html', 'ts', 'scss', 'css', 'assets']);
+gulp.task('build', ['html', 'ts', 'scss', 'css', 'assets', 'json']);
 gulp.task('default', ['build']);
