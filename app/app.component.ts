@@ -1,6 +1,6 @@
 import {Component} from 'angular2/core';
-import {Login} from './comp/Login/comp';
-import {Root} from './comp/Root/comp';
+import {Login} from './comp/login/login.comp';
+import {Root} from './comp/root/root.comp';
 import {RouteConfig, ROUTER_DIRECTIVES} from 'angular2/router';
 
 @Component({
