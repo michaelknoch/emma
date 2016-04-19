@@ -1,5 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 import {Router} from 'angular2/router';
+import {UserService} from "../../service/user/costumer.service";
 declare var __moduleName: any;
 
 @Component({
@@ -25,9 +26,10 @@ declare var __moduleName: any;
 export class Login implements OnInit {
 
     token = false;
+    _userService;
 
-    constructor(private _router: Router) {
-
+    constructor(private _router: Router, private _userService: UserService) {
+        this._userService = _userService
     }
 
     ngOnInit() {
@@ -35,7 +37,9 @@ export class Login implements OnInit {
     }
 
     login() {
-        this._router.navigate(['Root']);
+        this._userService.login().subscribe(() => {
+            this._router.navigate(['Root']);
+        });
     }
 
     enableToken() {
