@@ -1,6 +1,6 @@
 import { Component, OnInit } from 'angular2/core';
 import {Router} from 'angular2/router';
-import {UserService} from "../../service/user/costumer.service";
+import {UserService} from "../../service/user/user.service";
 declare var __moduleName: any;
 
 @Component({

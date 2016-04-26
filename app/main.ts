@@ -6,7 +6,7 @@ import {bootstrap}    from 'angular2/platform/browser';
 import {ROUTER_PROVIDERS, LocationStrategy, HashLocationStrategy} from 'angular2/router';
 import {HTTP_PROVIDERS} from 'angular2/http';
 import {CostumerService} from './service/costumer/costumer.service';
-import {UserService} from "./service/user/costumer.service";
+import {UserService} from "./service/user/user.service";
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
