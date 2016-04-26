@@ -9,6 +9,7 @@ import {CostumerService} from './service/costumer/costumer.service';
 import {UserService} from "./service/user/user.service";
 import {ModalConfig} from 'angular2-modal';
 import {CompanyService} from "./service/company/company.service";
+import {DataService} from "./service/data.service";
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
@@ -17,5 +18,6 @@ bootstrap(AppComponent, [
     provide(LocationStrategy, {useClass: HashLocationStrategy}),
     CostumerService,
     UserService,
-    CompanyService
+    CompanyService,
+    DataService
 ]);
