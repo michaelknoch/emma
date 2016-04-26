@@ -1,5 +1,6 @@
 import {Component} from 'angular2/core'
 import {ROUTER_DIRECTIVES} from 'angular2/router';
+import {CompanyService} from "../../service/company/company.service";
 declare var __moduleName: any;
 
 @Component({
@@ -12,6 +13,22 @@ declare var __moduleName: any;
 
 export class CompanyList {
 
-    constructor() {}
+    companies;
+
+    constructor(private companyService: CompanyService) {
+        companyService.getCompanies().subscribe(
+            data => {
+                this.companies = data;
+                console.info(data);
+            },
+            err => console.error(err)
+        );
+    }
+
+    selectCompany(company) {
+        this.companyService.selectCompany(company.id).subscribe(data => {
+            console.info('select company success')
+        });
+    }
 
 }

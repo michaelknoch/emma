@@ -8,10 +8,14 @@ import {HTTP_PROVIDERS} from 'angular2/http';
 import {CostumerService} from './service/costumer/costumer.service';
 import {UserService} from "./service/user/user.service";
 import {ModalConfig} from 'angular2-modal';
+import {CompanyService} from "./service/company/company.service";
 
 bootstrap(AppComponent, [
     ROUTER_PROVIDERS,
     HTTP_PROVIDERS,
     provide(ModalConfig, {useValue: new ModalConfig('lg', true, 81)}),
-    provide(LocationStrategy, {useClass: HashLocationStrategy}), CostumerService, UserService
+    provide(LocationStrategy, {useClass: HashLocationStrategy}),
+    CostumerService,
+    UserService,
+    CompanyService
 ]);

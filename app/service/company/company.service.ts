@@ -17,6 +17,11 @@ export class CompanyService {
             .map(res => res.json())
     }
 
+    selectCompany(id: String) {
+        return this.http.get(Config.BASEPATH + '/companies/select/' + id)
+            .map(res => res.json())
+    }
+
     createCompanie(mail: String, name: String, url: String, address: any) {
         return this.http.post(Config.BASEPATH + '/users', JSON.stringify({
                 mail: mail,

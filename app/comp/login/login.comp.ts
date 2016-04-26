@@ -29,13 +29,13 @@ export class Login {
     login() {
 
         this._userService.login(this.mail, this.password).subscribe(
-            data => this._router.navigate(['Root']),
+            data => this._router.navigate(['CompanyList']),
             err => this.err(err));
     }
 
     register() {
         this._userService.register(this.mail, this.password, this.name, this.surname).subscribe(
-            data => this._router.navigate(['Root']),
+            data => this._router.navigate(['CompanyList']),
             err => this.err(err));
     }
 
