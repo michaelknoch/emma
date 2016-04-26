@@ -20,6 +20,11 @@ export class UserService {
             .map(res => res.json())
     }
 
+    logout() {
+        return this.http.post(Config.BASEPATH + '/users/logout')
+            .map(res => res.json())
+    }
+
     register(mail: String, password: String, name: String, surname: String) {
         return this.http.post(Config.BASEPATH + '/users', JSON.stringify({
                 mail: mail,
