@@ -1,6 +1,7 @@
 import {Injectable} from 'angular2/core';
 import {Http, HTTP_PROVIDERS} from 'angular2/http';
 import 'rxjs/Rx';
+import {Config} from "../../app.config";
 
 @Injectable()
 export class UserService {
@@ -11,10 +12,20 @@ export class UserService {
         this.http = http;
     }
 
-    login() {
-        return this.http.post('http://52.39.63.210:8000/users/login', JSON.stringify({
-                mail: 'info@michaelknoch.de',
-                password: 'qwert1'
+    login(mail: String, password: String) {
+        return this.http.post(Config.BASEPATH + 'users/login', JSON.stringify({
+                mail: mail,
+                password: password
+            }))
+            .map(res => res.json())
+    }
+
+    register(mail: String, password: String, name: String, surname: String) {
+        return this.http.post(Config.BASEPATH + 'users', JSON.stringify({
+                mail: mail,
+                password: password,
+                name: name,
+                surname: surname
             }))
             .map(res => res.json())
     }
