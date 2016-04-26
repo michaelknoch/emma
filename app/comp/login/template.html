@@ -6,24 +6,24 @@
                 <img src="dist/assets/logo.png" class="logo">
 
                 <ul class="nav nav-pills">
-                    <li [ngClass]="{active: login}" (click)="login = true" role="presentation" class="active">
+                    <li [ngClass]="{active: loginState}" (click)="loginState = true" role="presentation" class="active">
                         <a href="#">Login</a></li>
-                    <li [ngClass]="{active: !login}" (click)="login = false" role="presentation">
+                    <li [ngClass]="{active: !loginState}" (click)="loginState = false" role="presentation">
                         <a href="#">I'm new</a>
                     </li>
                 </ul>
 
-                <div class="login" [ngClass]="{hidden: !login}">
+                <div class="login" [ngClass]="{hidden: !loginState}">
                     <input [(ngModel)]="mail" type="text" class="form-control" placeholder="Mail"
                            aria-describedby="basic-addon1">
                     <input [(ngModel)]="password" type="password" class="form-control" placeholder="Password"
                            aria-describedby="basic-addon1">
 
-                    <button (click)="userLogin()" type="button" class="btn btn-default">Login</button>
+                    <button (click)="login()" type="button" class="btn btn-default">Login</button>
 
                 </div>
 
-                <div class="register" [ngClass]="{hidden: login}">
+                <div class="register" [ngClass]="{hidden: loginState}">
                     <input [(ngModel)]="name" type="text" class="form-control" placeholder="Name"
                            aria-describedby="basic-addon1">
                     <input [(ngModel)]="surname" type="text" class="form-control" placeholder="Surname"
@@ -32,7 +32,7 @@
                            aria-describedby="basic-addon1">
                     <input [(ngModel)]="password" type="password" class="form-control" placeholder="Password"
                            aria-describedby="basic-addon1">
-                    <button (click)="userRegister()" type="button" class="btn btn-default">Register</button>
+                    <button (click)="register()" type="button" class="btn btn-default">Register</button>
 
                 </div>
 
