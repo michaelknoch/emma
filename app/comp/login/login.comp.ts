@@ -26,10 +26,16 @@ export class Login {
     }
 
     login() {
-
         this._userService.login(this.mail, this.password).subscribe(
             data => this._router.navigate(['CompanyList']),
             err => this.err(err));
+
+    }
+
+    logout() {
+        this._userService.logout().subscribe(data => {
+            console.info('logout');
+        });
     }
 
     register() {
