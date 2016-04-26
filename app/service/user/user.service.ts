@@ -13,7 +13,7 @@ export class UserService {
     }
 
     login(mail: String, password: String) {
-        return this.http.post(Config.BASEPATH + 'users/login', JSON.stringify({
+        return this.http.post(Config.BASEPATH + '/users/login', JSON.stringify({
                 mail: mail,
                 password: password
             }))
@@ -21,7 +21,7 @@ export class UserService {
     }
 
     register(mail: String, password: String, name: String, surname: String) {
-        return this.http.post(Config.BASEPATH + 'users', JSON.stringify({
+        return this.http.post(Config.BASEPATH + '/users', JSON.stringify({
                 mail: mail,
                 password: password,
                 name: name,

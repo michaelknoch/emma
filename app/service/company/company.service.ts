@@ -13,12 +13,12 @@ export class CompanyService {
     }
 
     getCompanies() {
-        return this.http.get(Config.BASEPATH + 'companies')
+        return this.http.get(Config.BASEPATH + '/companies')
             .map(res => res.json())
     }
 
     createCompanie(mail: String, name: String, url: String, address: any) {
-        return this.http.post(Config.BASEPATH + 'users', JSON.stringify({
+        return this.http.post(Config.BASEPATH + '/users', JSON.stringify({
                 mail: mail,
                 name: name,
                 url: url,
