@@ -14,7 +14,6 @@ declare var __moduleName: any;
 
 export class Login {
 
-    _userService;
     loginState: Boolean = true;
 
     password: String;
@@ -23,7 +22,7 @@ export class Login {
     surname: String;
 
     constructor(private modal: Modal, private _router: Router, private _userService: UserService) {
-        this._userService = _userService
+
     }
 
     login() {
