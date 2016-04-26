@@ -7,6 +7,7 @@ import {Feed} from "../feed/feed.comp";
 import {Offers} from "../offers/offers.comp";
 import {Invoices} from "../invoices/invoices.comp";
 import {Costumer} from "../costumer/costumer.comp";
+import {DataService} from "../../service/data.service";
 declare var __moduleName: any;
 
 @Component({
@@ -27,11 +28,18 @@ declare var __moduleName: any;
 
 export class Root implements OnInit {
 
-    constructor() {
+    userData = {
+        name: '',
+        companyName: ''
+    };
+
+    constructor(private _dataService: DataService) {
 
     }
 
     ngOnInit() {
-
+        this.userData.name = this._dataService.getData('current-user').name;
+        this.userData.companyName = this._dataService.getData('current-company').name;
+        debugger;
     }
 }

@@ -2,6 +2,7 @@ import { Component, OnInit } from 'angular2/core';
 import {Router} from 'angular2/router';
 import {UserService} from "../../service/user/user.service";
 import {Modal} from 'angular2-modal';
+import {DataService} from "../../service/data.service";
 
 declare var __moduleName: any;
 
@@ -21,15 +22,17 @@ export class Login {
     name: String;
     surname: String;
 
-    constructor(private modal: Modal, private _router: Router, private _userService: UserService) {
-
+    constructor(private modal: Modal, private _router: Router, private _userService: UserService,
+                private _dataService: DataService) {
     }
 
     login() {
         this._userService.login(this.mail, this.password).subscribe(
-            data => this._router.navigate(['CompanyList']),
+            data => {
+                this._dataService.setData('current-user', data.user);
+                this._router.navigate(['CompanyList']);
+            },
             err => this.err(err));
-
     }
 
     logout() {
