@@ -9,9 +9,11 @@ declare var __moduleName: any;
     styleUrls: ['login.css']
 })
 
-export class Login implements OnInit {
+export class Login {
 
     _userService;
+
+    login: Boolean = true;
 
     password: String;
     mail: String;
@@ -22,20 +24,16 @@ export class Login implements OnInit {
         this._userService = _userService
     }
 
-    ngOnInit() {
-
+    userLogin() {
+        this._userService.login(this.mail, this.password).subscribe(
+            data => this._router.navigate(['Root']),
+            err => console.error(err));
     }
 
-    login() {
-        this._userService.login(this.mail, this.password).subscribe(() => {
-            this._router.navigate(['CompanyList']);
-        });
-    }
-
-    register() {
-        this._userService.register(this.mail, this.password, this.name, this.surname).subscribe(() => {
-            this._router.navigate(['CompanyList']);
-        });
+    userRegister() {
+        this._userService.register(this.mail, this.password, this.name, this.surname).subscribe(
+            data => this._router.navigate(['Root']),
+            err => console.error(err));
     }
 
 }

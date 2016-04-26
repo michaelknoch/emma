@@ -6,8 +6,11 @@
                 <img src="dist/assets/logo.png" class="logo">
 
                 <ul class="nav nav-pills">
-                    <li role="presentation" class="active"><a href="#">Login</a></li>
-                    <li role="presentation"><a href="#">I'm new</a></li>
+                    <li [ngClass]="{active: login}" (click)="login = true" role="presentation" class="active">
+                        <a href="#">Login</a></li>
+                    <li [ngClass]="{active: !login}" (click)="login = false" role="presentation">
+                        <a href="#">I'm new</a>
+                    </li>
                 </ul>
 
                 <div class="login" [ngClass]="{hidden: !login}">
@@ -15,7 +18,9 @@
                            aria-describedby="basic-addon1">
                     <input [(ngModel)]="password" type="password" class="form-control" placeholder="Password"
                            aria-describedby="basic-addon1">
-                    <button (click)="login()" type="button" class="btn btn-default">Get Beautified</button>
+
+                    <button (click)="userLogin()" type="button" class="btn btn-default">Login</button>
+
                 </div>
 
                 <div class="register" [ngClass]="{hidden: login}">
@@ -27,7 +32,8 @@
                            aria-describedby="basic-addon1">
                     <input [(ngModel)]="password" type="password" class="form-control" placeholder="Password"
                            aria-describedby="basic-addon1">
-                    <button (click)="login()" type="button" class="btn btn-default">Get Beautified</button>
+                    <button (click)="userRegister()" type="button" class="btn btn-default">Register</button>
+
                 </div>
 
             </div>
