@@ -41,7 +41,7 @@ export class Login {
     err(msg) {
         console.error(msg);
         this.modal.alert()
-            .title('Hoppla').body(msg.status + ':' + msg.statusText).open();
+            .title('Hoppla').body(msg.status + ':' + msg._body).open();
     }
 
 }
