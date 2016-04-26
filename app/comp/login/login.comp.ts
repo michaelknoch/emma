@@ -5,28 +5,18 @@ declare var __moduleName: any;
 
 @Component({
     moduleId: __moduleName,
-    template: `
-    <div class="container-fluid login-container">
-        <div class="container">
-            <div class="row">
-                <div class="form-wrapper">
-                    <img src="dist/assets/logo.png" class="logo">
-                     <input type="text" class="form-control" placeholder="Mail" aria-describedby="basic-addon1">
-                     <input type="password" class="form-control" placeholder="Password" aria-describedby="basic-addon1">
-                     <input (click)="enableToken()" [ngClass]="{disabeld: !token}" type="text" class="form-control token"
-                     placeholder="Register from Token" aria-describedby="basic-addon1">
-                     <button (click)="login()" type="button" class="btn btn-default">Get Beautified</button>
-                </div>
-            </div>
-        </div>
-   </div> `,
-    styleUrls: ['style.css']
+    templateUrl: 'template.html',
+    styleUrls: ['login.css']
 })
 
 export class Login implements OnInit {
 
-    token = false;
     _userService;
+
+    password: String;
+    mail: String;
+    name: String;
+    surname: String;
 
     constructor(private _router: Router, private _userService: UserService) {
         this._userService = _userService
@@ -37,14 +27,15 @@ export class Login implements OnInit {
     }
 
     login() {
-        this._userService.login().subscribe(() => {
-            this._router.navigate(['Root']);
+        this._userService.login(this.mail, this.password).subscribe(() => {
+            this._router.navigate(['CompanyList']);
         });
     }
 
-    enableToken() {
-        console.log('enable');
-        this.token = true;
+    register() {
+        this._userService.register(this.mail, this.password, this.name, this.surname).subscribe(() => {
+            this._router.navigate(['CompanyList']);
+        });
     }
 
 }
