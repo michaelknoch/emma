@@ -35,7 +35,7 @@ export class NewCompany {
     newCompany() {
         this.companyService.createCompanie(this.mail, this.name, this.url, this.address).subscribe(
             data => {
-                console.info('create company success';
+                console.info('create company success');
                 this._router.navigate(['CompanyList']);
             },
             err => this.err(err)
