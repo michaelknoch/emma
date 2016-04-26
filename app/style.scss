@@ -1,3 +1,5 @@
+@import 'colors';
+
 *:focus {
     outline: none !important;
 }
@@ -12,6 +14,10 @@ ul {
     background-color: #F4F4F4;
     min-height: 100vh;
     color: white;
+
+    &.asphalt {
+        background-color: $asphalt;
+    }
 }
 
 .relative {
@@ -51,4 +57,29 @@ ul {
 
 .fa-plus-circle {
     font-size: 50px;
+}
+
+.form-wrapper {
+    input {
+        margin: 5px;
+        margin-left: 0;
+        color: black;
+        padding: 20px;
+        border: none !important;
+        border-radius: 0;
+    }
+}
+
+.btn-default {
+    color: #333;
+    background-color: #A6ABAF;
+    width: 100%;
+    border-radius: 0;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    transition-duration: 0.3s;
+    &:hover {
+        background-color: #DFBA2E;
+    }
 }
