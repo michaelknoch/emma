@@ -30,13 +30,13 @@ export class Login {
 
         this._userService.login(this.mail, this.password).subscribe(
             data => this._router.navigate(['Root']),
-            err => this.err(err);
+            err => this.err(err));
     }
 
     register() {
         this._userService.register(this.mail, this.password, this.name, this.surname).subscribe(
             data => this._router.navigate(['Root']),
-            err => this.err(err);
+            err => this.err(err));
     }
 
     err(msg) {
