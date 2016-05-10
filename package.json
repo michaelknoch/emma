@@ -27,7 +27,6 @@
     "angular2-in-memory-web-api": "0.0.7",
     "angular2-modal": "^0.1.4",
     "bootstrap": "^3.3.6",
-    "electron-gh-releases": "^2.0.2",
     "font-awesome": "^4.6.1",
     "gulp-bump": "^2.1.0"
   },
@@ -35,10 +34,6 @@
     "concurrently": "^2.0.0",
     "del": "^2.2.0",
     "dotenv": "^2.0.0",
-    "electron-installer-codesign": "^0.1.1",
-    "electron-packager": "^6.0.1",
-    "electron-prebuilt": "^0.37.3",
-    "electron-release": "^2.2.0",
     "gulp": "^3.9.1",
     "gulp-env": "^0.4.0",
     "gulp-sass": "^2.2.0",
